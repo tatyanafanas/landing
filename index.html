@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lengo Organics | Organic Hair Care Made in Uganda</title>
+  <meta name="description" content="Organic, shea butter-based hair care for textured, curly, and natural hair, crafted in Uganda with Nilotica shea butter.">
+  <style>
+    /*
+      Design direction: a restrained editorial palette drawn from Lengo Organics' visual cues.
+      Warm ivory (#FBF7F0) keeps the page clean and premium, shea gold (#B77835) references
+      Nilotica shea butter and existing packaging accents, botanical green (#526B4E) signals
+      organic care, and cacao black (#211813) provides accessible contrast. The font pairing
+      uses Georgia for elegant, heritage-led headlines and system sans-serif for readable UI.
+    */
+    :root {
+      --ivory: #fbf7f0;
+      --cream: #f2eadc;
+      --shea: #b77835;
+      --leaf: #526b4e;
+      --ink: #211813;
+      --muted: #6e6158;
+      --white: #fffdfa;
+      --shadow: 0 24px 70px rgba(33, 24, 19, .13);
+      --radius-lg: 2rem;
+      --radius-md: 1.1rem;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--ivory);
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .skip-link {
+      position: absolute; left: 1rem; top: -4rem; z-index: 20;
+      background: var(--ink); color: var(--white); padding: .75rem 1rem; border-radius: 999px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 .75rem;
+      color: var(--shea);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: var(--serif); line-height: .98; letter-spacing: -.045em; }
+    h1 { font-size: clamp(3rem, 10vw, 6.75rem); margin: 0 0 1.1rem; max-width: 9ch; }
+    h2 { font-size: clamp(2.35rem, 6vw, 4.8rem); margin: 0; }
+    h3 { font-size: 1.35rem; margin: 0 0 .55rem; letter-spacing: -.02em; }
+    p { margin: 0; color: var(--muted); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      min-height: 3.15rem; padding: .85rem 1.25rem; border-radius: 999px; border: 1px solid transparent;
+      background: var(--shea); color: var(--white); font-weight: 800; text-decoration: none;
+      box-shadow: 0 14px 28px rgba(183, 120, 53, .24); transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); background: #9e6227; box-shadow: 0 18px 38px rgba(183, 120, 53, .32); }
+    .btn.secondary { background: transparent; color: var(--ink); border-color: rgba(33,24,19,.18); box-shadow: none; }
+    .btn.secondary:hover, .btn.secondary:focus-visible { background: var(--cream); }
+
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(18px); background: rgba(251,247,240,.86); border-bottom: 1px solid rgba(33,24,19,.08); }
+    .nav { min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; font-weight: 800; }
+    .mark { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--ink); color: var(--white); display: grid; place-items: center; font-family: var(--serif); font-size: 1.2rem; }
+    nav ul { list-style: none; display: none; gap: 1.4rem; padding: 0; margin: 0; font-size: .92rem; font-weight: 700; }
+    nav a { text-decoration: none; color: var(--muted); transition: color .18s ease; }
+    nav a:hover, nav a:focus-visible { color: var(--ink); }
+
+    .hero { padding: 3rem 0 4.5rem; overflow: hidden; }
+    .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero-copy > p:not(.eyebrow) { font-size: clamp(1.05rem, 2.5vw, 1.3rem); max-width: 36rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
+    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 2rem; max-width: 35rem; }
+    .trust-row span { padding: .8rem; border-radius: 1rem; background: rgba(255,253,250,.72); color: var(--ink); font-size: .78rem; font-weight: 800; text-align: center; border: 1px solid rgba(33,24,19,.08); }
+    .visual-card { position: relative; border-radius: var(--radius-lg); background: linear-gradient(140deg, #ead8bf, #f8efe3 54%, #d9dcbc); padding: 1rem; box-shadow: var(--shadow); }
+    .product-stage { min-height: 28rem; border-radius: 1.45rem; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.9), transparent 28%), linear-gradient(135deg, #f4cfda 0 43%, #f9f4eb 43%); position: relative; overflow: hidden; display: grid; place-items: end center; padding: 2rem; }
+    .bottle, .jar { position: absolute; border-radius: .75rem; filter: drop-shadow(0 24px 22px rgba(33,24,19,.20)); transition: transform .25s ease; }
+    .visual-card:hover .bottle, .visual-card:hover .jar { transform: translateY(-5px) rotate(var(--r)); }
+    .bottle { width: 6rem; height: 16rem; bottom: 2rem; background: linear-gradient(90deg, #f8f8ed, #fff 45%, #e7eadb); --r: -2deg; }
+    .bottle.one { left: 19%; transform: rotate(-6deg); }
+    .bottle.two { right: 20%; transform: rotate(6deg); height: 14rem; background: linear-gradient(90deg, #f4f0ff, #fff 46%, #e5def0); --r: 2deg; }
+    .bottle::before { content: ''; position: absolute; left: 1.8rem; right: 1.8rem; top: -2rem; height: 2.3rem; border-radius: .35rem .35rem .15rem .15rem; background: #efe0bf; }
+    .label { position: absolute; left: .55rem; right: .55rem; top: 6rem; min-height: 4.7rem; border-radius: .35rem; background: #dbe7cc; display: grid; place-items: center; padding: .35rem; text-align: center; font-size: .62rem; font-weight: 900; color: var(--leaf); }
+    .bottle.two .label { background: #d8c4e8; color: #65467b; }
+    .jar { width: 10rem; height: 8rem; bottom: 1.2rem; background: #f2a92f; border: .65rem solid #fff7e8; border-top-width: 1.4rem; --r: 0deg; }
+    .jar .label { top: 2.25rem; background: #fff8e7; color: var(--ink); }
+    .leaf-shape { position: absolute; width: 9rem; height: 4rem; border-radius: 100% 0 100% 0; background: rgba(82,107,78,.18); transform: rotate(-25deg); }
+    .leaf-shape.a { top: 2.3rem; left: -2rem; } .leaf-shape.b { right: -2.5rem; bottom: 7rem; transform: rotate(140deg); }
+    .badge { position: absolute; right: 1.2rem; top: 1.2rem; width: 7.4rem; height: 7.4rem; border-radius: 50%; background: var(--ink); color: var(--white); display: grid; place-items: center; text-align: center; padding: .9rem; font-family: var(--serif); font-size: 1rem; line-height: 1.05; }
+
+    section { padding: 4.5rem 0; }
+    .split-head { display: grid; gap: 1rem; margin-bottom: 2rem; }
+    .split-head p { max-width: 42rem; font-size: 1.05rem; }
+    .cards { display: grid; gap: 1rem; }
+    .card { background: var(--white); border: 1px solid rgba(33,24,19,.08); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: 0 10px 30px rgba(33,24,19,.05); transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(33,24,19,.10); }
+    .icon { width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--cream); color: var(--leaf); margin-bottom: 1rem; font-weight: 900; }
+    .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .product { text-align: center; }
+    .mini-product { height: 10rem; border-radius: 1rem; background: linear-gradient(145deg, #f7f0e6, #fff); margin-bottom: 1rem; display: grid; place-items: center; color: var(--shea); font-family: var(--serif); font-size: 2.2rem; }
+    .about { background: var(--cream); }
+    .about-panel { display: grid; gap: 2rem; align-items: center; background: var(--white); border-radius: var(--radius-lg); padding: clamp(1.25rem, 4vw, 3rem); box-shadow: var(--shadow); }
+    .portrait { min-height: 24rem; border-radius: 1.5rem; background: linear-gradient(160deg, rgba(82,107,78,.2), rgba(183,120,53,.2)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700"%3E%3Crect width="600" height="700" fill="%23ead8bf"/%3E%3Ccircle cx="300" cy="205" r="116" fill="%23211813"/%3E%3Ccircle cx="300" cy="250" r="76" fill="%23845a3c"/%3E%3Cpath d="M118 700c24-174 94-265 182-265s158 91 182 265" fill="%23fffdfa"/%3E%3Cpath d="M190 160c38-96 189-114 231 4 18 50 5 105-26 145-53-28-119-30-181 1-39-42-45-97-24-150z" fill="%23211813"/%3E%3C/svg%3E') center/cover; }
+    .quote-grid { display: grid; gap: 1rem; }
+    blockquote { margin: 0; }
+    blockquote p { color: var(--ink); font-family: var(--serif); font-size: 1.2rem; line-height: 1.25; }
+    cite { display: block; margin-top: 1rem; color: var(--muted); font-style: normal; font-weight: 800; font-size: .9rem; }
+    .cta { text-align: center; background: var(--leaf); color: var(--white); }
+    .cta p, .cta .eyebrow { color: rgba(255,253,250,.82); }
+    .cta h2 { max-width: 10ch; margin-inline: auto; }
+    .cta .btn { margin-top: 1.5rem; background: var(--white); color: var(--ink); box-shadow: none; }
+    footer { background: var(--ink); color: var(--white); padding: 3rem 0; }
+    footer p, footer a { color: rgba(255,253,250,.72); }
+    .footer-grid { display: grid; gap: 1.5rem; }
+    .footer-links { display: grid; gap: .55rem; }
+
+    @media (min-width: 720px) {
+      nav ul { display: flex; }
+      .hero { padding-top: 5rem; }
+      .hero-grid { grid-template-columns: .92fr 1.08fr; }
+      .split-head { grid-template-columns: .85fr 1fr; align-items: end; }
+      .cards { grid-template-columns: repeat(4, 1fr); }
+      .product-grid { grid-template-columns: repeat(4, 1fr); }
+      .about-panel { grid-template-columns: .85fr 1.15fr; }
+      .quote-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1.2fr repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Lengo Organics home"><span class="mark" aria-hidden="true">L</span><span>Lengo Organics</span></a>
+      <nav>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#balance">Beauty is Balance</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn secondary" href="[REPLACE: checkout or shop URL]">Shop</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Organic. Natural. Pure.</p>
+          <h1>Authentic Ugandan beauty for textured hair.</h1>
+          <p>Shea butter-based hair care made in Uganda for textured, curly, and natural hair — formulated to cleanse, detangle, nourish, and care for the scalp.</p>
+          <div class="actions">
+            <a class="btn" href="[REPLACE: checkout or shop URL]">Shop the collection</a>
+            <a class="btn secondary" href="#story">Read the story</a>
+          </div>
+          <div class="trust-row" aria-label="Brand highlights">
+            <span>Made in Uganda</span><span>Nilotica shea</span><span>Textured hair care</span>
+          </div>
+        </div>
+        <div class="visual-card" aria-label="Stylized product display inspired by Lengo Organics packaging">
+          <div class="product-stage" role="img" aria-label="Three illustrated Lengo Organics hair care products on a soft editorial background">
+            <span class="leaf-shape a" aria-hidden="true"></span><span class="leaf-shape b" aria-hidden="true"></span>
+            <div class="bottle one" aria-hidden="true"><span class="label">DEEP<br>CLEANSING</span></div>
+            <div class="jar" aria-hidden="true"><span class="label">HAIR &amp;<br>SCALP BUTTER</span></div>
+            <div class="bottle two" aria-hidden="true"><span class="label">LEAVE-IN<br>REPAIR</span></div>
+            <div class="badge">Beauty<br>is<br>Balance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="balance">
+      <div class="container split-head">
+        <div><p class="eyebrow">Value proposition</p><h2>Balanced care, from root to ritual.</h2></div>
+        <p>Lengo Organics brings a polished, modern Ugandan lens to organic hair care: focused formulas, locally valued ingredients, and routines designed for the real needs of textured hair.</p>
+      </div>
+      <div class="container cards">
+        <article class="card"><div class="icon" aria-hidden="true">01</div><h3>Nilotica shea power</h3><p>Made around soft Nilotica shea butter sourced from Northern Uganda for rich-feeling moisture without a heavy, waxy finish.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">02</div><h3>Scalp-first comfort</h3><p>Peppermint and tea tree-led care supports a fresh, cooling routine for scalps that need attention under wigs, weaves, or protective styles.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">03</div><h3>Focused essentials</h3><p>A concise system of cleansing, detangling, masking, and butter care keeps the routine simple, intentional, and easy to repeat.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">04</div><h3>Ugandan value addition</h3><p>Manufactured, labelled, and packaged in Uganda, the brand champions finished beauty products with local identity and pride.</p></article>
+      </div>
+    </section>
+
+    <section id="products" class="about">
+      <div class="container split-head">
+        <div><p class="eyebrow">Core collection</p><h2>Four staples for natural hair days.</h2></div>
+        <p>Use this section to connect directly to your real product pages, bundles, or checkout once the site is wired to commerce.</p>
+      </div>
+      <div class="container cards product-grid">
+        <article class="card product"><div class="mini-product" aria-hidden="true">✦</div><h3>Deep Cleansing Shampoo</h3><p>[REPLACE: Product size, price, and verified product-page link]</p></article>
+        <article class="card product"><div class="mini-product" aria-hidden="true">❧</div><h3>Detangler Spray</h3><p>Designed as a pre-poo step for easier sectioning and prep. [REPLACE: Product details]</p></article>
+        <article class="card product"><div class="mini-product" aria-hidden="true">✺</div><h3>Leave-in Conditioning Repair Mask</h3><p>Hydrating support for textured strands. [REPLACE: Directions and claim language]</p></article>
+        <article class="card product"><div class="mini-product" aria-hidden="true">◐</div><h3>Hair &amp; Scalp Butter</h3><p>A best-loved shea-based butter for hair and scalp rituals. [REPLACE: Verified bestseller wording]</p></article>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="container about-panel">
+        <div class="portrait" role="img" aria-label="Editorial placeholder portrait of Lengo Organics founder Samantha Okullo"></div>
+        <div>
+          <p class="eyebrow">About Lengo</p>
+          <h2>Made with heritage, precision, and purpose.</h2>
+          <p>Lengo means “beauty” in Luo, reflecting founder Samantha Okullo’s Northern Ugandan heritage and her belief that beauty is balance — the connection between how we care for ourselves and how we show up in the world.</p>
+          <p style="margin-top: 1rem;">Founded in 2019, Lengo Organics grew from a personal search for better options for textured hair and scalp needs into a Ugandan-made hair care brand centered on organic, shea butter-based products.</p>
+          <div class="actions"><a class="btn" href="[REPLACE: checkout or shop URL]">Shop Lengo Organics</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="proof-heading">
+      <div class="container split-head">
+        <div><p class="eyebrow">Social proof</p><h2 id="proof-heading">Loved in the routine.</h2></div>
+        <p>Replace these placeholders with real customer reviews, press snippets, stockist quotes, or salon feedback before launch.</p>
+      </div>
+      <div class="container quote-grid">
+        <blockquote class="card"><p>“[REPLACE: Short testimonial about softer, easier wash days.]”</p><cite>[REPLACE: Customer name]</cite></blockquote>
+        <blockquote class="card"><p>“[REPLACE: Testimonial about scalp comfort under protective styles.]”</p><cite>[REPLACE: Customer name]</cite></blockquote>
+        <blockquote class="card"><p>“[REPLACE: Retailer or salon quote about product quality and presentation.]”</p><cite>[REPLACE: Partner name]</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="eyebrow">Ready for balance?</p>
+        <h2 id="cta-heading">Begin with the essentials.</h2>
+        <p style="max-width: 36rem; margin: 1rem auto 0;">Choose the Lengo Organics routine for clean formulation, premium presentation, and hair care proudly made in Uganda.</p>
+        <a class="btn" href="[REPLACE: checkout or shop URL]">Shop the collection</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">L</span><span>Lengo Organics</span></a>
+        <p style="margin-top: 1rem; max-width: 26rem;">Organic, natural hair care for textured, curly, and natural hair. [REPLACE: Official brand address or tagline]</p>
+      </div>
+      <div class="footer-links"><strong>Navigate</strong><a href="#products">Products</a><a href="#balance">Benefits</a><a href="#story">Story</a></div>
+      <div class="footer-links"><strong>Contact</strong><a href="mailto:[REPLACE: email]">[REPLACE: email]</a><a href="tel:[REPLACE: phone]">[REPLACE: phone]</a></div>
+      <div class="footer-links"><strong>Social</strong><a href="[REPLACE: Instagram URL]">Instagram</a><a href="[REPLACE: TikTok URL]">TikTok</a></div>
+    </div>
+  </footer>
+</body>
+</html>
