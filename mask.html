@@ -1,194 +1,277 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leave-in Conditioning Repair Mask | Lengo Organics</title>
-  <meta name="description" content="A product landing page for Lengo Organics Leave-in Conditioning Repair Mask, organic textured hair care made in Uganda.">
-  <style>
-    /*
-      Product page direction: the same Lengo palette from the main landing page is softened for a
-      photo-shoot feel — creamy studio neutrals, shea-gold highlights, leaf-green botanical notes,
-      and deep cacao text. Replace the mask-*.jpg filenames below if the shoot files use different
-      exact names; the layout is designed to let warm product photography lead the page.
-    */
-    :root {
-      --ivory: #fbf7f0;
-      --cream: #f0e5d5;
-      --rose: #e7b8ad;
-      --shea: #b77835;
-      --leaf: #526b4e;
-      --ink: #211813;
-      --muted: #71645b;
-      --white: #fffdfa;
-      --line: rgba(33, 24, 19, .11);
-      --shadow: 0 24px 70px rgba(33, 24, 19, .14);
-      --serif: Georgia, 'Times New Roman', serif;
-      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: var(--sans); background: var(--ivory); color: var(--ink); line-height: 1.6; }
-    img { display: block; max-width: 100%; height: auto; }
-    a { color: inherit; }
-    .skip-link { position: absolute; top: -4rem; left: 1rem; z-index: 20; padding: .75rem 1rem; border-radius: 999px; background: var(--ink); color: var(--white); transition: top .2s ease; }
-    .skip-link:focus { top: 1rem; }
-    .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
-    .eyebrow { margin: 0 0 .75rem; color: var(--shea); font-size: .78rem; font-weight: 850; letter-spacing: .18em; text-transform: uppercase; }
-    h1, h2, h3 { font-family: var(--serif); line-height: .98; letter-spacing: -.045em; margin: 0; }
-    h1 { font-size: clamp(3.2rem, 11vw, 7.25rem); max-width: 9.2ch; }
-    h2 { font-size: clamp(2.2rem, 6vw, 4.7rem); }
-    h3 { font-size: 1.45rem; letter-spacing: -.025em; }
-    p { margin: 0; color: var(--muted); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3.15rem; padding: .88rem 1.25rem; border-radius: 999px; border: 1px solid transparent; background: var(--shea); color: var(--white); font-weight: 850; text-decoration: none; box-shadow: 0 14px 28px rgba(183,120,53,.24); transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
-    .btn:hover, .btn:focus-visible { transform: translateY(-2px); background: #9e6227; box-shadow: 0 18px 38px rgba(183,120,53,.32); }
-    .btn.secondary { background: rgba(255,253,250,.55); color: var(--ink); border-color: var(--line); box-shadow: none; }
-    .btn.secondary:hover, .btn.secondary:focus-visible { background: var(--white); }
-    header { position: sticky; top: 0; z-index: 10; background: rgba(251,247,240,.86); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
-    .nav { min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .brand { display: inline-flex; align-items: center; gap: .8rem; font-weight: 850; text-decoration: none; }
-    .mark { width: 2.5rem; height: 2.5rem; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--white); font-family: var(--serif); font-size: 1.2rem; }
-    .nav-links { display: none; gap: 1.35rem; font-size: .92rem; font-weight: 750; }
-    .nav-links a { color: var(--muted); text-decoration: none; }
-    .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave-In Conditioning Repair Mask | Lengo Organics</title>
+<meta name="description" content="Lengo Organics Leave-In Conditioning Repair Mask — an intensive, deep-penetrating leave-in cream treatment made with pure shea butter to stop and mend breakage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     This product page intentionally breaks from the site's
+     pink/gold poster palette — it's built around the actual ad
+     shoot photography (dusk lake, golden-hour rim light, wet
+     black stone, indigo sky), which reads as darker and more
+     luxurious than the daytime studio shots on the main site.
+     Same type pairing (Cormorant Garamond italic + Poppins) for
+     brand continuity.
+     ============================================================ */
+  :root{
+    --night:#141B29;
+    --night-deep:#0B0F17;
+    --gold:#D9A15B;
+    --gold-soft:#F0C989;
+    --rose:#C98CA0;
+    --cream:#F3ECDE;
+    --muted:rgba(243,236,222,.72);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--night); color:var(--cream); font-family:'Poppins',sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .serif{font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; color:var(--gold-soft);}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
 
-    .hero { padding: 3rem 0 4rem; overflow: hidden; }
-    .hero-grid { display: grid; gap: 2rem; align-items: center; }
-    .copy p.lede { max-width: 38rem; margin-top: 1.1rem; font-size: clamp(1.08rem, 2.3vw, 1.32rem); }
-    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.55rem; }
-    .quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 2rem; max-width: 36rem; }
-    .quick span { border: 1px solid var(--line); border-radius: 1rem; background: rgba(255,253,250,.7); padding: .8rem; text-align: center; color: var(--ink); font-size: .78rem; font-weight: 850; }
-    .photo-collage { position: relative; min-height: 34rem; border-radius: 2rem; background: linear-gradient(135deg, var(--rose), var(--cream) 46%, #d9deca); box-shadow: var(--shadow); padding: 1rem; isolation: isolate; }
-    .photo { position: absolute; overflow: hidden; border: .65rem solid var(--white); border-radius: 1.35rem; background: linear-gradient(135deg, #f6ebdc, #fff8ef); box-shadow: 0 18px 40px rgba(33,24,19,.18); }
-    .photo img { width: 100%; height: 100%; object-fit: cover; }
-    .photo::after { content: attr(data-fallback); position: absolute; inset: 0; display: grid; place-items: center; padding: 1.25rem; text-align: center; color: var(--muted); font-weight: 800; background: linear-gradient(135deg, rgba(251,247,240,.92), rgba(231,184,173,.55)); }
-    .photo:has(img[src])::after { display: none; }
-    .photo.one { inset: 1.2rem 18% auto 1.2rem; height: 54%; transform: rotate(-2.5deg); }
-    .photo.two { right: 1rem; top: 5.5rem; width: 42%; height: 52%; transform: rotate(4deg); }
-    .photo.three { left: 16%; right: 8%; bottom: 1.1rem; height: 40%; transform: rotate(1.4deg); }
-    .stamp { position: absolute; z-index: 2; right: 2rem; bottom: 2rem; width: 8rem; height: 8rem; border-radius: 50%; display: grid; place-items: center; padding: 1rem; background: var(--ink); color: var(--white); text-align: center; font-family: var(--serif); line-height: 1.02; box-shadow: 0 16px 32px rgba(33,24,19,.22); }
-    section { padding: 4.5rem 0; }
-    .split { display: grid; gap: 1rem; margin-bottom: 2rem; }
-    .split > p { max-width: 42rem; font-size: 1.05rem; }
-    .cards { display: grid; gap: 1rem; }
-    .card { border: 1px solid var(--line); border-radius: 1.2rem; background: var(--white); padding: 1.25rem; box-shadow: 0 10px 30px rgba(33,24,19,.05); transition: transform .18s ease, box-shadow .18s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(33,24,19,.1); }
-    .icon { width: 2.7rem; height: 2.7rem; margin-bottom: 1rem; border-radius: 50%; display: grid; place-items: center; background: var(--cream); color: var(--leaf); font-weight: 900; }
-    .ritual { background: var(--cream); }
-    .steps { counter-reset: step; }
-    .step { position: relative; padding-left: 3.3rem; }
-    .step::before { counter-increment: step; content: counter(step); position: absolute; left: 1.15rem; top: 1.15rem; width: 1.65rem; height: 1.65rem; border-radius: 50%; display: grid; place-items: center; background: var(--leaf); color: var(--white); font-weight: 850; font-size: .82rem; }
-    .ingredients { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
-    .ingredients span { padding: .55rem .75rem; border-radius: 999px; background: rgba(82,107,78,.1); color: var(--leaf); font-weight: 850; font-size: .88rem; }
-    .story-panel { display: grid; gap: 2rem; align-items: center; border-radius: 2rem; background: var(--white); box-shadow: var(--shadow); padding: clamp(1.25rem, 4vw, 3rem); }
-    .story-art { min-height: 22rem; border-radius: 1.5rem; background: radial-gradient(circle at 40% 32%, rgba(255,253,250,.92) 0 16%, transparent 17%), linear-gradient(135deg, rgba(183,120,53,.2), rgba(82,107,78,.25)), var(--rose); position: relative; overflow: hidden; }
-    .story-art::before { content: ''; position: absolute; width: 18rem; height: 18rem; border-radius: 50%; left: 50%; top: 48%; transform: translate(-50%,-50%); background: var(--shea); box-shadow: 0 0 0 2rem rgba(255,253,250,.7); }
-    .story-art::after { content: 'Repair Mask'; position: absolute; left: 50%; top: 48%; transform: translate(-50%,-50%); width: 8.7rem; height: 6.2rem; display: grid; place-items: center; border-radius: .6rem; background: var(--white); color: var(--ink); font-family: var(--serif); text-align: center; box-shadow: 0 20px 32px rgba(33,24,19,.14); }
-    .cta { text-align: center; background: var(--leaf); color: var(--white); }
-    .cta p, .cta .eyebrow { color: rgba(255,253,250,.82); }
-    .cta h2 { max-width: 11ch; margin-inline: auto; }
-    .cta .btn { margin-top: 1.5rem; background: var(--white); color: var(--ink); box-shadow: none; }
-    footer { padding: 3rem 0; background: var(--ink); color: var(--white); }
-    footer p, footer a { color: rgba(255,253,250,.72); }
-    .footer-grid { display: grid; gap: 1.5rem; }
-    .footer-links { display: grid; gap: .55rem; }
-    @media (min-width: 760px) {
-      .nav-links { display: flex; }
-      .hero { padding-top: 5rem; }
-      .hero-grid { grid-template-columns: .9fr 1.1fr; }
-      .split { grid-template-columns: .86fr 1fr; align-items: end; }
-      .cards { grid-template-columns: repeat(3, 1fr); }
-      .story-panel { grid-template-columns: .9fr 1.1fr; }
-      .footer-grid { grid-template-columns: 1.35fr repeat(3, 1fr); }
-    }
-  </style>
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease;}
+    .reveal.is-visible{opacity:1; transform:translateY(0);}
+  }
+
+  header{position:sticky; top:0; z-index:50; background:rgba(20,27,41,.85); backdrop-filter:blur(10px); border-bottom:1px solid rgba(243,236,222,.1);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1180px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; color:var(--cream);}
+  .brand-mark{height:30px; filter:brightness(0) invert(1);}
+  nav.links{display:flex; gap:26px; list-style:none; margin:0; padding:0;}
+  nav.links a{text-decoration:none; font-size:.85rem; font-weight:500; color:var(--muted);}
+  nav.links a:hover{color:var(--gold-soft);}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:13px 28px;
+    background:var(--gold); color:var(--night-deep); text-decoration:none;
+    font-weight:700; font-size:.85rem; letter-spacing:.02em; text-transform:uppercase;
+    border:none; border-radius:999px; box-shadow:0 16px 30px -12px rgba(217,161,91,.5);
+    transition:transform .18s ease, background .18s ease;
+  }
+  .btn:hover{background:var(--gold-soft); transform:translateY(-2px);}
+  .btn.ghost{background:transparent; color:var(--cream); border:1px solid rgba(243,236,222,.4); box-shadow:none;}
+  .btn.ghost:hover{background:rgba(243,236,222,.1);}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative; min-height:82vh; display:flex; align-items:flex-end; overflow:hidden;}
+  .hero img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%;}
+  .hero::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,15,23,.15) 0%, rgba(11,15,23,.55) 55%, rgba(11,15,23,.92) 100%);
+  }
+  .hero-copy{position:relative; z-index:1; padding:64px 0 72px; width:100%;}
+  .hero-copy p.eyebrow{color:var(--gold-soft); font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; font-weight:600; margin:0 0 12px;}
+  .hero-copy h1{font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:clamp(2.2rem,5vw,3.6rem); max-width:16ch; margin:0 0 18px; color:var(--cream);}
+  .hero-copy p.lede{max-width:48ch; color:var(--muted); font-size:1.02rem; margin:0 0 30px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+
+  /* ---------- Ritual / story split ---------- */
+  .ritual{padding:100px 0; background:var(--night);}
+  .ritual .wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+  .ritual-photo{border-radius:6px; overflow:hidden; aspect-ratio:4/5;}
+  .ritual-photo img{width:100%; height:100%; object-fit:cover;}
+  .ritual h2.serif{font-size:2.1rem; margin-bottom:18px;}
+  .ritual p{color:var(--muted); margin:0 0 16px; max-width:52ch;}
+
+  /* ---------- Full-bleed break ---------- */
+  .break{position:relative; height:56vw; max-height:640px; overflow:hidden;}
+  .break img{width:100%; height:100%; object-fit:cover;}
+  .break::after{content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(11,15,23,.6), transparent 40%);}
+  .break-caption{position:absolute; left:0; right:0; bottom:36px; text-align:center; z-index:1;}
+  .break-caption p.serif{font-size:1.6rem; max-width:22ch; margin:0 auto;}
+
+  /* ---------- Ingredients ---------- */
+  .ingredients{padding:100px 0; background:var(--night-deep);}
+  .ingredients .wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+  .ing-photo{border-radius:6px; overflow:hidden; aspect-ratio:4/3;}
+  .ing-photo img{width:100%; height:100%; object-fit:cover;}
+  .ingredients h2.serif{font-size:2rem; margin-bottom:16px;}
+  .ingredients p{color:var(--muted); margin:0 0 20px; max-width:52ch;}
+  .tag-list{display:flex; flex-wrap:wrap; gap:10px; list-style:none; margin:0; padding:0;}
+  .tag-list li{
+    padding:9px 16px; border-radius:999px; border:1px solid rgba(217,161,91,.4);
+    color:var(--gold-soft); font-size:.82rem; font-weight:500;
+  }
+  .formula-note{margin-top:22px; font-size:.85rem; color:var(--muted); font-style:italic;}
+
+  /* ---------- How to use ---------- */
+  .ritual-steps{padding:96px 0; background:var(--night);}
+  .steps-head{text-align:center; max-width:520px; margin:0 auto 52px;}
+  .steps-head h2.serif{font-size:2rem;}
+  .steps-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .step-card{background:rgba(243,236,222,.04); border:1px solid rgba(243,236,222,.1); border-radius:12px; padding:30px 26px;}
+  .step-num{font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--gold-soft); font-size:2rem; display:block; margin-bottom:14px;}
+  .step-card h3{margin:0 0 8px; font-size:1.05rem; font-weight:600;}
+  .step-card p{color:var(--muted); font-size:.9rem; margin:0;}
+
+  /* ---------- Final CTA ---------- */
+  .final{padding:96px 0; text-align:center; background:var(--night-deep);}
+  .final p.serif{font-size:2.2rem; margin-bottom:16px;}
+  .final p.sub{color:var(--muted); max-width:44ch; margin:0 auto 30px;}
+
+  footer{background:var(--night-deep); padding:48px 0 28px; border-top:1px solid rgba(243,236,222,.08);}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer a{text-decoration:none; color:var(--muted); font-size:.85rem;}
+  footer a:hover{color:var(--gold-soft);}
+  .footer-links{display:flex; gap:22px; flex-wrap:wrap;}
+
+  @media (max-width:900px){
+    nav.links{display:none;}
+    .ritual .wrap, .ingredients .wrap{grid-template-columns:1fr; gap:36px;}
+    .steps-grid{grid-template-columns:1fr;}
+  }
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header>
-    <div class="container nav" aria-label="Product page navigation">
-      <a class="brand" href="index.html" aria-label="Back to Lengo Organics landing page"><span class="mark" aria-hidden="true">L</span><span>Lengo Organics</span></a>
-      <nav class="nav-links" aria-label="Product navigation"><a href="#benefits">Benefits</a><a href="#ritual">How to use</a><a href="#details">Details</a><a href="index.html">Landing page</a></nav>
-      <a class="btn secondary" href="index.html">Back to home</a>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html"><img class="brand-mark" src="assets/logo-tight.png" alt="Lengo Organics"></a>
+    <nav class="links">
+      <a href="#ritual">The Ritual</a>
+      <a href="#ingredients">Ingredients</a>
+      <a href="#how-to-use">How to Use</a>
+      <a href="index.html">Full Site</a>
+    </nav>
+    <a href="#" data-todo="add product checkout URL" class="btn">Shop the Mask</a>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <img src="mask6.jpg" alt="Lengo Organics Leave-In Conditioning Repair Mask on wet black stone at dusk by a Ugandan lake">
+    <div class="wrap hero-copy">
+      <p class="eyebrow">Leave-In Conditioning Repair Mask</p>
+      <h1>Softness, slip, and repair-minded moisture.</h1>
+      <p class="lede">An intensive, deep-penetrating leave-in cream treatment made with pure shea butter and other natural oils — formulated to stop and mend breakage, repair split ends, and add manageability and shine with every application.</p>
+      <div class="hero-actions">
+        <a href="#" data-todo="add product checkout URL" class="btn">Shop the Mask</a>
+        <a href="index.html" class="btn ghost">View Full Landing Page</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="copy">
-          <p class="eyebrow">Leave-in Conditioning Repair Mask</p>
-          <h1>Softness, slip, and repair-minded moisture.</h1>
-          <p class="lede">A creamy Lengo Organics treatment for textured, curly, and natural hair — designed to support hydrated strands, easier detangling, and a polished wash-day ritual.</p>
-          <div class="actions">
-            <a class="btn" href="[REPLACE: product checkout URL]">Shop the mask</a>
-            <a class="btn secondary" href="index.html">View full landing page</a>
-          </div>
-          <div class="quick" aria-label="Product highlights"><span>Textured hair</span><span>Shea-based</span><span>Made in Uganda</span></div>
-        </div>
-        <div class="photo-collage" aria-label="Photo shoot collage for the Lengo Organics repair mask">
-          <figure class="photo one" data-fallback="[REPLACE: mask-1.jpg photo]"><img src="mask-1.jpg" onerror="this.remove()" alt="Lengo Organics Leave-in Conditioning Repair Mask styled in a warm product photo"></figure>
-          <figure class="photo two" data-fallback="[REPLACE: mask-2.jpg photo]"><img src="mask-2.jpg" onerror="this.remove()" alt="Close-up product photo of the Leave-in Conditioning Repair Mask packaging"></figure>
-          <figure class="photo three" data-fallback="[REPLACE: mask-3.jpg photo]"><img src="mask-3.jpg" onerror="this.remove()" alt="Editorial photo shoot scene featuring the Lengo Organics repair mask"></figure>
-          <div class="stamp">Beauty<br>is<br>Balance</div>
-        </div>
+  <!-- ================= RITUAL ================= -->
+  <section class="ritual reveal" id="ritual">
+    <div class="wrap">
+      <div class="ritual-photo"><img src="mask3.jpg" alt="Woman at golden hour by a Ugandan lake holding the Lengo Organics Repair Mask"></div>
+      <div>
+        <p class="serif" style="font-size:1.1rem; margin-bottom:8px;">Beauty is Balance</p>
+        <h2 class="serif">A wash-day ritual, not just a step.</h2>
+        <p>Built for locs, coils, and coarse, textured strands that need more than a rinse-out conditioner. The Repair Mask is designed to sit with your hair — mending breakage and split ends from the inside of the strand out, so manageability and shine last well past wash day.</p>
+        <p>Every batch is formulated and manufactured in Uganda, the same as the rest of the Lengo range.</p>
       </div>
-    </section>
-
-    <section id="benefits">
-      <div class="container split">
-        <div><p class="eyebrow">Why it belongs in the routine</p><h2>Conditioning care with a clean, premium feel.</h2></div>
-        <p>Keep the final claims aligned with approved product copy. The language below stays benefit-led without inventing clinical or unverified results.</p>
-      </div>
-      <div class="container cards">
-        <article class="card"><div class="icon" aria-hidden="true">01</div><h3>Moisture support</h3><p>Built for strands that need a richer-feeling conditioning step during wash day or protective-style transitions.</p></article>
-        <article class="card"><div class="icon" aria-hidden="true">02</div><h3>Better slip</h3><p>Designed to make sectioning and detangling feel more manageable for textured, curly, and natural hair routines.</p></article>
-        <article class="card"><div class="icon" aria-hidden="true">03</div><h3>Ritual-worthy finish</h3><p>Minimal, polished presentation keeps the product page aligned with Lengo’s clean Ugandan beauty identity.</p></article>
-      </div>
-    </section>
-
-    <section class="ritual" id="ritual">
-      <div class="container split">
-        <div><p class="eyebrow">Wash-day ritual</p><h2>Use after cleansing, before styling.</h2></div>
-        <p>[REPLACE: Confirm exact directions from the product label before publishing.]</p>
-      </div>
-      <div class="container cards steps">
-        <article class="card step"><h3>Apply in sections</h3><p>Work through clean, damp hair from mid-lengths to ends, adding more where hair needs extra conditioning.</p></article>
-        <article class="card step"><h3>Let it sit</h3><p>Allow the mask to condition for the label-recommended time. [REPLACE: verified timing]</p></article>
-        <article class="card step"><h3>Style with intention</h3><p>Rinse or leave in according to verified product directions, then follow with your Lengo styling or scalp routine.</p></article>
-      </div>
-    </section>
-
-    <section id="details">
-      <div class="container story-panel">
-        <div class="story-art" aria-hidden="true"></div>
-        <div>
-          <p class="eyebrow">Ingredient story</p>
-          <h2>Rooted in Lengo’s shea-butter care philosophy.</h2>
-          <p>The repair mask page should reinforce the broader brand promise: organic, shea butter-based products made in Uganda for textured hair care. Add verified ingredient percentages, certifications, and INCI details here once approved.</p>
-          <div class="ingredients" aria-label="Ingredient placeholders"><span>Nilotica shea</span><span>[REPLACE: verified oils]</span><span>[REPLACE: scent notes]</span><span>[REPLACE: size]</span></div>
-          <div class="actions"><a class="btn" href="[REPLACE: product checkout URL]">Shop the mask</a><a class="btn secondary" href="index.html">Return to landing page</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" aria-labelledby="cta-heading">
-      <div class="container">
-        <p class="eyebrow">Complete the routine</p>
-        <h2 id="cta-heading">Pair the mask with Lengo essentials.</h2>
-        <p style="max-width: 38rem; margin: 1rem auto 0;">Move from cleanse to condition to scalp care with the full Lengo Organics range.</p>
-        <a class="btn" href="index.html#products">Explore the collection</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div><a class="brand" href="index.html"><span class="mark" aria-hidden="true">L</span><span>Lengo Organics</span></a><p style="margin-top: 1rem; max-width: 26rem;">Organic, natural hair care for textured, curly, and natural hair. [REPLACE: official product disclaimer/contact details]</p></div>
-      <div class="footer-links"><strong>Navigate</strong><a href="index.html">Landing page</a><a href="#benefits">Benefits</a><a href="#ritual">How to use</a></div>
-      <div class="footer-links"><strong>Product</strong><a href="[REPLACE: checkout URL]">Buy now</a><a href="[REPLACE: stockist URL]">Stockists</a></div>
-      <div class="footer-links"><strong>Social</strong><a href="[REPLACE: Instagram URL]">Instagram</a><a href="[REPLACE: TikTok URL]">TikTok</a></div>
     </div>
-  </footer>
+  </section>
+
+  <!-- ================= FULL-BLEED BREAK ================= -->
+  <div class="break">
+    <img src="mask1.jpg" alt="Locs fanned out in water from above, with the Lengo Organics Repair Mask resting poolside">
+    <div class="break-caption wrap"><p class="serif">Formulated for coils, locs, and coarse texture.</p></div>
+  </div>
+
+  <!-- ================= INGREDIENTS ================= -->
+  <section class="ingredients reveal" id="ingredients">
+    <div class="wrap">
+      <div class="ing-photo"><img src="mask5.jpg" alt="Lengo Organics Repair Mask beside fresh coconut on wet black stone"></div>
+      <div>
+        <h2 class="serif">What's actually in it.</h2>
+        <p>A short, purposeful ingredient list built around pure shea butter — no filler, nothing you can't pronounce.</p>
+        <ul class="tag-list">
+          <li>Aqua</li>
+          <li>Castor oil</li>
+          <li>Mango butter</li>
+          <li>Coconut milk</li>
+          <li>Shea oil</li>
+          <li>Cetyl alcohol</li>
+          <li>Polysorbate-20</li>
+          <li>Menthol</li>
+          <li>Guava leaf extract</li>
+          <li>Emulsifying wax</li>
+          <li>Dimethicone oil</li>
+          <li>Fragrance</li>
+        </ul>
+        <p class="formula-note">Newly improved formula, enriched with Vitamin E and essential oils. [REPLACE: confirm final INCI listing against the approved product label before publishing.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW TO USE ================= -->
+  <section class="ritual-steps reveal" id="how-to-use">
+    <div class="wrap">
+      <div class="steps-head">
+        <p class="serif">The Ritual</p>
+        <h2 class="serif">How to use.</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Shake well</h3>
+          <p>Before every use, to bring the formula back together.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Apply to clean hair</h3>
+          <p>Work through freshly cleansed, towel-dried hair from mid-lengths to ends.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Let it work</h3>
+          <p>Leave in — no rinse required. Softens, smooths, and restores texture as it sits.</p>
+        </div>
+      </div>
+      <p style="text-align:center; color:var(--muted); font-size:.82rem; margin-top:30px; font-style:italic;">[REPLACE: confirm these directions match the current product label before publishing — the wording above is adapted from Lengo's approved product description, not transcribed from packaging.]</p>
+    </div>
+  </section>
+
+  <!-- ================= FULL-BLEED BREAK 2 ================= -->
+  <div class="break">
+    <img src="Mask2.jpg" alt="Golden-hour light through wet locs, Lengo Organics Repair Mask in hand, Ugandan lake at dusk">
+    <div class="break-caption wrap"><p class="serif">Beauty is Balance.</p></div>
+  </div>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final reveal">
+    <div class="wrap">
+      <p class="serif">Complete the routine.</p>
+      <p class="sub">Pair the Repair Mask with the Deep Cleansing Shampoo and Detangler Root Hair Spray for the full Lengo wash-day system.</p>
+      <a href="index.html#products" class="btn">Explore the Collection</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span style="font-size:.82rem; color:var(--muted);">© <span id="year"></span> Lengo Organics</span>
+    <div class="footer-links">
+      <a href="index.html">Landing Page</a>
+      <a href="mailto:lengoorganics18@gmail.com">lengoorganics18@gmail.com</a>
+      <a href="tel:+256758604818">+256 758 604 818</a>
+      <a href="https://www.instagram.com/lengoorganics/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/people/Lengo-Organics/100064016591459/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
 </body>
 </html>
